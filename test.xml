@@ -1,0 +1,13 @@
+<md:EntityDescriptor
+	xmlns="urn:oasis:names:tc:SAML:2.0:metadata"
+	xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata"
+	xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion"
+	xmlns:ds="http://www.w3.org/2000/09/xmldsig#" entityID="http://localhost:8080/auth/realms/test" ID="ID_b24587a7-96b2-4e1a-9c94-519a39cc610d">
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol" AuthnRequestsSigned="false" WantAssertionsSigned="false">
+		<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="http://localhost:8080/auth/realms/test/broker/saml2/endpoint"/>
+		<md:NameIDFormat>
+urn:oasis:names:tc:SAML:2.0:nameid-format:persistent
+</md:NameIDFormat>
+		<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="http://localhost:8080/auth/realms/test/broker/saml2/endpoint" isDefault="true" index="1"/>
+	</md:SPSSODescriptor>
+</md:EntityDescriptor>
